@@ -3,8 +3,10 @@ import Navigator from '../src/navigator.jsm';
 const navigator = new Navigator(page => {
     page
         .replaceContent('.content')
-        .applyTitle()
-        .applyLocation();
+        .changeTitle()
+        .changeStyles()
+        .changeScripts()
+        .changeLocation();
 
     console.log(`Page changed to "${page.url}"`);
 });
